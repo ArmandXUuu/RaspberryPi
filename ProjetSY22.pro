@@ -34,6 +34,23 @@ HEADERS += \
 FORMS += \
         projetmainwindow.ui
 
+INCLUDEPATH += /usr/local/include \
+                /usr/local/include/opencv2 \
+                /usr/local/include/raspicam
+
+
+LIBS += /usr/local/lib/libraspicam.so \
+        /usr/local/lib/libraspicam_cv.so \
+        -L/usr/local/lib \
+        -lopencv_core \
+        -lopencv_imgcodecs \
+        -lopencv_highgui \
+        -lopencv_video \
+        -lopencv_videoio \
+        -lopencv_videostab \
+        -lraspicam \
+        -lraspicam_cv
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
