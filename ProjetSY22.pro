@@ -29,7 +29,8 @@ SOURCES += \
         projetmainwindow.cpp
 
 HEADERS += \
-        projetmainwindow.h
+        projetmainwindow.h \
+    main.h
 
 FORMS += \
         projetmainwindow.ui
