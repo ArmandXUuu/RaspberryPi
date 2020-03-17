@@ -1,4 +1,4 @@
-# RaspberryPi
+# Projet RaspberryPi (en cours)
 ### **Date de début :** mars 2020
 
 ## Description :
