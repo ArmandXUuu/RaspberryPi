@@ -19,6 +19,9 @@ projetMainWindow::projetMainWindow(QWidget *parent) :
     if (!Camera_RaspicamCV.open()) {
         cout<<"Erreur d'ouvrir la caméra !"<<endl;
     }
+
+    // activer le timeur
+    connect(timer, SIGNAL(timeout()), this, SLOT(on_captureEtAffichageQTransform_clicked()));
 }
 
 projetMainWindow::~projetMainWindow()
@@ -106,16 +109,16 @@ void projetMainWindow::on_captureEtAffichageQTransform_clicked()
 
 void projetMainWindow::on_videoEnTempsReelButton_clicked()
 {
-    connect(timer, SIGNAL(timeout()), this, SLOT(on_captureEtAffichageQTransform_clicked()));
-    timer->start();
-}
 
-void projetMainWindow::on_arreterButton_clicked()
-{
-    timer->disconnect();
+    timer->start(41);
 }
 
 void projetMainWindow::on_pauserButton_clicked()
 {
     timer->stop();
+}
+
+void projetMainWindow::on_commencerButton_clicked()
+{
+    timer->start(41);
 }

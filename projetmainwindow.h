@@ -24,9 +24,9 @@ private slots:
 
     void on_videoEnTempsReelButton_clicked();
 
-    void on_arreterButton_clicked();
-
     void on_pauserButton_clicked();
+
+    void on_commencerButton_clicked();
 
 private:
     Ui::projetMainWindow *ui;
